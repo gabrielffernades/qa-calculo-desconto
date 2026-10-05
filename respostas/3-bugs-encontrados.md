@@ -1,6 +1,6 @@
 # Resposta 3 – Bugs encontrados e como os testes os revelaram
 
-Os 49 casos de teste foram executados contra o código original: 19 falharam e 30 passaram. As falhas apontaram três problemas.
+Os 52 casos de teste foram executados contra o código original: 19 falharam e 33 passaram. As falhas apontaram três problemas.
 
 ## Bug 1 – Fronteira dos R$ 100,00
 
@@ -43,10 +43,10 @@ O Dev Jr. testou apenas R$ 300,00 com o tipo escrito da forma esperada. Esse val
 
 Duas técnicas guiaram a escolha dos valores:
 
-1. **Análise de valor limite.** Foram testados os pontos exatos de troca de faixa e seus vizinhos (99,99 / 100 / 100,01 e 499,99 / 500), além dos limites do teto (999,99 / 1000 / 1000,01 para COMUM e 799,99 / 800 para VIP). Foi o valor exato de R$ 100,00 que revelou o Bug 1: com 99,99 e 100,01 o código original acertava, e o erro só existia naquele único ponto.
+1. **Análise de valor limite.** Foram testados os pontos exatos de troca de faixa e seus vizinhos (99,99 / 100 / 100,01 e 499,99 / 500 / 500,01), além dos limites do teto (999,99 / 1000 / 1000,01 para COMUM e 799,99 / 800 para VIP). Foi o valor exato de R$ 100,00 que revelou o Bug 1: com 99,99 e 100,01 o código original acertava, e o erro só existia naquele único ponto.
 2. **Partição de equivalência.** As entradas foram divididas em classes válidas (cada faixa de valor, VIP e COMUM) e inválidas (negativos, não numéricos, tipos desconhecidos), com representantes de cada uma. As variações de escrita do VIP revelaram o Bug 2 e as classes inválidas revelaram o Bug 3.
 
-Os testes das fronteiras de R$ 500,00 e do teto de R$ 200,00 passaram no código original, o que confirma que essas partes já estavam corretas. Após as correções, os 49 testes passaram.
+Os testes das fronteiras de R$ 500,00 e do teto de R$ 200,00 passaram no código original, o que confirma que essas partes já estavam corretas. Após as correções, os 52 testes passaram.
 
 ## Distribuição das 19 falhas
 

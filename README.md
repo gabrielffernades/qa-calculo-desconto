@@ -38,16 +38,16 @@ A função retorna o valor do desconto em reais (R$):
 
 | Momento | Resultado |
 |---|---|
-| Antes da correção (código original) | 19 falharam, 30 passaram |
-| Depois da correção | 49 passaram |
+| Antes da correção (código original) | 19 falharam, 33 passaram |
+| Depois da correção | 52 passaram |
 
 ### PRINT1 – antes da correção
 
-![Execução dos testes contra o código original: 19 falharam e 30 passaram](prints/print1-antes-da-correcao.png)
+![Execução dos testes contra o código original: 19 falharam e 33 passaram](prints/print1-antes-da-correcao.png)
 
 ### PRINT2 – depois da correção
 
-![Execução dos testes contra o código corrigido: 49 passaram](prints/print2-depois-da-correcao.png)
+![Execução dos testes contra o código corrigido: 52 passaram](prints/print2-depois-da-correcao.png)
 
 ## Resumo dos bugs
 
